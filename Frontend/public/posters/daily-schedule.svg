@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1600" viewBox="0 0 1200 1600" role="img" aria-labelledby="title desc">
+  <title id="title">Daily worship schedule</title><desc id="desc">Summary of the ten-day Dussehra worship programme.</desc>
+  <defs><linearGradient id="bg" x2="1" y2="1"><stop stop-color="#4c1f16"/><stop offset=".5" stop-color="#b25f27"/><stop offset="1" stop-color="#3c1712"/></linearGradient></defs>
+  <rect width="1200" height="1600" rx="36" fill="url(#bg)"/>
+  <g fill="#ffd66f" opacity=".42"><circle cx="90" cy="140" r="7"/><circle cx="1110" cy="245" r="9"/><circle cx="105" cy="1440" r="8"/><circle cx="1090" cy="1325" r="6"/></g>
+  <rect x="56" y="46" width="1088" height="1508" rx="38" fill="#fff9e9" stroke="#f2c95b" stroke-width="6"/>
+  <rect x="72" y="62" width="1056" height="176" rx="30" fill="#a5261e"/>
+  <text x="600" y="132" text-anchor="middle" font-family="system-ui,sans-serif" font-size="42" font-weight="900" fill="#fff">DAILY WORSHIP SCHEDULE</text>
+  <text x="600" y="190" text-anchor="middle" font-family="system-ui,sans-serif" font-size="28" font-weight="700" fill="#fbd96f">DUSSEHRA · 11–20 OCTOBER 2026</text>
+  <g font-family="system-ui,sans-serif" transform="translate(90 285)">
+    <rect width="1020" height="92" rx="18" fill="#302f86"/><text x="35" y="58" font-size="29" font-weight="800" fill="#fff">DATE</text><text x="265" y="58" font-size="29" font-weight="800" fill="#fff">MAIN WORSHIP PROGRAMME</text>
+    <g font-size="25" fill="#352e2a">
+      <g transform="translate(0 110)"><rect width="1020" height="96" rx="16" fill="#f7e8be"/><text x="28" y="58" font-weight="800" fill="#8f251e">11 OCT</text><text x="265" y="58">Opening · special darshan · Kumkumarchana</text></g>
+      <g transform="translate(0 218)"><rect width="1020" height="96" rx="16" fill="#fffaf0"/><text x="28" y="58" font-weight="800" fill="#8f251e">12 OCT</text><text x="265" y="58">Sahasra Sampenga Pushparchana</text></g>
+      <g transform="translate(0 326)"><rect width="1020" height="96" rx="16" fill="#f7e8be"/><text x="28" y="58" font-weight="800" fill="#8f251e">13 OCT</text><text x="265" y="58">Sahasrarchana with bangles</text></g>
+      <g transform="translate(0 434)"><rect width="1020" height="96" rx="16" fill="#fffaf0"/><text x="28" y="58" font-weight="800" fill="#8f251e">14 OCT</text><text x="265" y="58">Sahasrarchana with turmeric</text></g>
+      <g transform="translate(0 542)"><rect width="1020" height="96" rx="16" fill="#f7e8be"/><text x="28" y="58" font-weight="800" fill="#8f251e">15 OCT</text><text x="265" y="58">Sahasra Kamala Pushparchana</text></g>
+      <g transform="translate(0 650)"><rect width="1020" height="96" rx="16" fill="#fffaf0"/><text x="28" y="58" font-weight="800" fill="#8f251e">16 OCT</text><text x="265" y="42">Aksharabhyasam · Saraswati Puja</text><text x="265" y="73" font-size="20" fill="#695f55">Moola Nakshatram</text></g>
+      <g transform="translate(0 758)"><rect width="1020" height="96" rx="16" fill="#f7e8be"/><text x="28" y="58" font-weight="800" fill="#8f251e">17 OCT</text><text x="265" y="58">Manidweepa Varnarchana · Kalasa Puja</text></g>
+      <g transform="translate(0 866)"><rect width="1020" height="96" rx="16" fill="#fffaf0"/><text x="28" y="58" font-weight="800" fill="#8f251e">18 OCT</text><text x="265" y="58">Sahasra Gulaabhi Pushparchana</text></g>
+      <g transform="translate(0 974)"><rect width="1020" height="96" rx="16" fill="#f7e8be"/><text x="28" y="58" font-weight="800" fill="#8f251e">19 OCT</text><text x="265" y="58">Sahasra Vividha Phala-archana</text></g>
+      <g transform="translate(0 1082)"><rect width="1020" height="118" rx="16" fill="#a5261e"/><text x="28" y="70" font-weight="850" fill="#ffdf68">20 OCT</text><text x="265" y="50" font-weight="800" fill="#fff">Maha Chandi Homam · Maha Purnahuti</text><text x="265" y="85" font-size="21" fill="#ffe9bd">Vahana pujas · Shami Puja · Vijayadashami</text></g>
+    </g>
+  </g>
+  <text x="600" y="1520" text-anchor="middle" font-family="system-ui,sans-serif" font-size="22" font-weight="650" fill="#7c211b">Sri Sri Sri Trishakti Devalayam</text>
+</svg>

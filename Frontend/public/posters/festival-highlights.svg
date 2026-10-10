@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1600" viewBox="0 0 1200 1600" role="img" aria-labelledby="title desc">
+  <title id="title">Festival highlights</title><desc id="desc">Decorative announcement for the 2026 Dussehra festival.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#fff8df"/><stop offset=".45" stop-color="#f7c968"/><stop offset="1" stop-color="#a42b22"/></linearGradient>
+    <radialGradient id="halo"><stop stop-color="#fff8c4"/><stop offset="1" stop-color="#f4c45d" stop-opacity="0"/></radialGradient>
+    <filter id="shadow"><feDropShadow dx="0" dy="14" stdDeviation="18" flood-opacity=".18"/></filter>
+    <pattern id="dots" width="40" height="40" patternUnits="userSpaceOnUse"><circle cx="4" cy="4" r="2" fill="#fff" opacity=".25"/></pattern>
+  </defs>
+  <rect width="1200" height="1600" rx="36" fill="url(#bg)"/><rect width="1200" height="1600" fill="url(#dots)"/>
+  <g fill="#fff4d7" opacity=".85"><path d="M0 0h160l-34 83 34 83H0z"/><path d="M1200 0h-160l34 83-34 83h160z"/></g>
+  <text x="600" y="100" text-anchor="middle" font-family="system-ui,sans-serif" font-size="30" font-weight="700" fill="#5f221b">SIRASTHU · SUBHAMASTHU · AVIGHNAMASTHU</text>
+  <text x="600" y="185" text-anchor="middle" font-family="system-ui,sans-serif" font-size="66" font-weight="900" fill="#991f18">SRI SRI SRI TRISHAKTI</text>
+  <text x="600" y="245" text-anchor="middle" font-family="system-ui,sans-serif" font-size="48" font-weight="800" fill="#2c316f">DEVALAYAM</text>
+  <text x="600" y="295" text-anchor="middle" font-family="system-ui,sans-serif" font-size="25" font-weight="650" fill="#4f473d">Mandir Marg · Ukkunagaram · Visakhapatnam</text>
+  <circle cx="600" cy="560" r="250" fill="url(#halo)"/>
+  <g transform="translate(600 555)" filter="url(#shadow)">
+    <circle r="196" fill="#fff7df" stroke="#b7751b" stroke-width="14"/>
+    <circle r="164" fill="#8e251e" stroke="#f0bc46" stroke-width="8"/>
+    <path d="M0-126C-25-82-67-47-67 7c0 58 38 104 67 130 29-26 67-72 67-130 0-54-42-89-67-133z" fill="#f4c14f"/>
+    <path d="M-116 65c48-20 76-13 116 24-34 37-71 51-116 30 12-16 19-34 0-54zm232 0c-48-20-76-13-116 24 34 37 71 51 116 30-12-16-19-34 0-54z" fill="#f7db86"/>
+    <circle cy="-9" r="45" fill="#fff3d6"/><circle cx="-16" cy="-12" r="5" fill="#2a1714"/><circle cx="16" cy="-12" r="5" fill="#2a1714"/>
+    <path d="M-18 15q18 15 36 0" fill="none" stroke="#2a1714" stroke-width="5" stroke-linecap="round"/>
+    <circle cy="-60" r="9" fill="#e3262e"/>
+  </g>
+  <rect x="92" y="845" width="1016" height="128" rx="36" fill="#302f86"/>
+  <text x="600" y="905" text-anchor="middle" font-family="system-ui,sans-serif" font-size="37" font-weight="750" fill="#fff">11–20 OCTOBER 2026</text>
+  <text x="600" y="950" text-anchor="middle" font-family="system-ui,sans-serif" font-size="26" font-weight="600" fill="#f8d96f">TEN DAYS OF DUSSEHRA CELEBRATIONS</text>
+  <g transform="translate(90 1020)">
+    <rect width="1020" height="390" rx="38" fill="#fff8ea" opacity=".97"/>
+    <text x="510" y="72" text-anchor="middle" font-family="system-ui,sans-serif" font-size="38" font-weight="850" fill="#8e251e">DAILY WORSHIP · ALANKARANA · ANNADANAM</text>
+    <path d="M80 112h860" stroke="#d7a83d" stroke-width="3"/>
+    <text x="145" y="192" font-family="system-ui,sans-serif" font-size="34" font-weight="800" fill="#302f86">12–2 PM</text><text x="145" y="235" font-family="system-ui,sans-serif" font-size="25" fill="#4f473d">Daily annadanam</text>
+    <text x="565" y="192" font-family="system-ui,sans-serif" font-size="34" font-weight="800" fill="#302f86">20 OCT</text><text x="565" y="235" font-family="system-ui,sans-serif" font-size="25" fill="#4f473d">Vijayadashami</text>
+    <text x="145" y="312" font-family="system-ui,sans-serif" font-size="30" font-weight="800" fill="#8e251e">MAHA CHANDI HOMAM</text><text x="145" y="350" font-family="system-ui,sans-serif" font-size="23" fill="#4f473d">Maha Purnahuti at 12:01 PM</text>
+  </g>
+  <text x="600" y="1515" text-anchor="middle" font-family="system-ui,sans-serif" font-size="25" font-weight="650" fill="#fff7e0">Festival information · Sri Sri Sri Trishakti Devalayam</text>
+</svg>

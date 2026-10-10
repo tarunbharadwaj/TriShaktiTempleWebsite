@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1600" viewBox="0 0 1200 1600" role="img" aria-labelledby="title desc">
+  <title id="title">Annadanam announcement</title><desc id="desc">Temple announcement for free daily meals during Dussehra.</desc>
+  <defs><linearGradient id="bg" x2="0" y2="1"><stop stop-color="#fff9e9"/><stop offset=".58" stop-color="#f6df9d"/><stop offset="1" stop-color="#e9bd57"/></linearGradient><radialGradient id="sun"><stop stop-color="#fff"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></radialGradient></defs>
+  <rect width="1200" height="1600" rx="36" fill="url(#bg)"/><circle cx="600" cy="320" r="310" fill="url(#sun)"/>
+  <path d="M0 0h1200v130c-110-54-202 57-310 0-110-58-218 52-330 0-108-51-204 55-300 0C168 77 80 138 0 95z" fill="#8f241d"/>
+  <text x="600" y="90" text-anchor="middle" font-family="system-ui,sans-serif" font-size="36" font-weight="800" fill="#fff8db">SRI SRI SRI TRISHAKTI DEVALAYAM</text>
+  <g transform="translate(600 390)"><circle r="196" fill="#f5c64f" opacity=".35"/><path d="M0-156c-28 51-86 100-86 171 0 73 49 130 86 163 37-33 86-90 86-163 0-71-58-120-86-171z" fill="#a32920"/><path d="M-142 79c65-34 108-17 142 38-44 45-94 61-149 28 24-18 28-40 7-66zm284 0c-65-34-108-17-142 38 44 45 94 61 149 28-24-18-28-40-7-66z" fill="#d98d2c"/></g>
+  <rect x="72" y="660" width="1056" height="230" rx="42" fill="#9e2019"/>
+  <text x="600" y="755" text-anchor="middle" font-family="system-ui,sans-serif" font-size="64" font-weight="900" fill="#fff">DAILY ANNADANAM</text>
+  <text x="600" y="830" text-anchor="middle" font-family="system-ui,sans-serif" font-size="44" font-weight="800" fill="#ffdc48">11–20 OCTOBER 2026</text>
+  <g transform="translate(98 955)" font-family="system-ui,sans-serif">
+    <rect width="1004" height="400" rx="44" fill="#fffdf6" stroke="#d39b32" stroke-width="4"/>
+    <text x="502" y="84" text-anchor="middle" font-size="38" font-weight="850" fill="#302f86">FREE MEALS FOR ALL DEVOTEES</text>
+    <text x="502" y="142" text-anchor="middle" font-size="26" fill="#5b5044">Every festival day in the temple premises</text>
+    <g transform="translate(195 205)"><circle r="67" fill="#f7d469"/><path d="M-45-4h90c0 53-18 76-45 76S-45 49-45-4z" fill="#fff8e7" stroke="#8f251e" stroke-width="6"/><path d="M-58-4h116" stroke="#8f251e" stroke-width="7" stroke-linecap="round"/></g>
+    <text x="365" y="230" font-size="58" font-weight="900" fill="#8f251e">12:00–2:00 PM</text>
+    <text x="365" y="285" font-size="26" fill="#51473d">Service with dignity, devotion and care.</text>
+    <path d="M110 335h784" stroke="#ead9b6" stroke-width="3"/>
+    <text x="502" y="376" text-anchor="middle" font-size="24" font-weight="650" fill="#5b5044">All are warmly welcome</text>
+  </g>
+  <text x="600" y="1488" text-anchor="middle" font-family="system-ui,sans-serif" font-size="29" font-weight="750" fill="#7c211b">Mandir Marg · Ukkunagaram · Visakhapatnam</text>
+</svg>
