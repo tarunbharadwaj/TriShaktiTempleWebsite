@@ -1,25 +1,24 @@
 import { useEffect, useMemo, useRef, useState } from "react"
 import {
   ArrowDown,
+  ArrowUp,
   ArrowUpRight,
   CalendarDays,
   Clock3,
   Flower2,
-  HeartHandshake,
   IndianRupee,
   Info,
   Languages,
   MapPin,
   Menu,
   Search,
-  Sparkles,
   UsersRound,
 } from "lucide-react"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
 import { Button } from "@/components/ui/button"
 import { Dialog, DialogContent, DialogDescription, DialogTitle, DialogTrigger } from "@/components/ui/dialog"
 import { Sheet, SheetClose, SheetContent, SheetDescription, SheetTitle, SheetTrigger } from "@/components/ui/sheet"
-import { contacts, copy, posters, pujas, schedule, temple } from "@/data/content"
+import { contacts, copy, goddessLabels, posters, pujas, schedule, temple } from "@/data/content"
 import { cn } from "@/lib/utils"
 
 const navKeys = ["festival", "schedule", "pujas", "gallery", "visit"]
@@ -65,17 +64,6 @@ function Reveal({ children, className, ...props }) {
   }, [])
 
   return <div ref={ref} className={cn("reveal", className)} {...props}>{children}</div>
-}
-
-function TempleMark({ className }) {
-  return (
-    <div className={cn("temple-mark", className)} aria-hidden="true">
-      <div className="temple-mark__halo" />
-      <Flower2 className="temple-mark__flower temple-mark__flower--left" />
-      <Flower2 className="temple-mark__flower temple-mark__flower--right" />
-      <div className="temple-mark__flame"><Sparkles className="size-5" /></div>
-    </div>
-  )
 }
 
 function LanguageButton({ language, onToggle, compact = false }) {
@@ -154,13 +142,25 @@ function SectionHeading({ eyebrow, title, body, align = "left" }) {
   )
 }
 
-function Hero({ language }) {
+function Hero({ language, setLanguage }) {
   const t = copy[language]
+  const toggleLanguage = () => setLanguage(language === "en" ? "te" : "en")
+
   return (
     <section id="top" className="hero-section scroll-mt-24 overflow-hidden">
       <div className="hero-orb hero-orb--one" /><div className="hero-orb hero-orb--two" />
-      <div className="page-shell relative grid min-h-[calc(100svh-4.75rem)] items-center gap-12 py-16 lg:grid-cols-[1.05fr_.95fr] lg:py-20">
+      <div className="page-shell relative grid min-h-[calc(100svh-4.75rem)] content-start items-center gap-12 py-8 sm:py-12 lg:grid-cols-[1.05fr_.95fr] lg:content-center lg:py-20">
         <div className="relative z-10 max-w-3xl">
+          <button
+            type="button"
+            onClick={toggleLanguage}
+            className="mb-5 flex min-h-11 w-full items-center justify-center gap-2 rounded-xl text-xs font-semibold text-ink-muted outline-none transition-colors hover:bg-white/60 focus-visible:ring-2 focus-visible:ring-gold sm:hidden"
+            aria-label={t.languageAction}
+          >
+            <Languages className="size-4 text-vermilion" aria-hidden="true" />
+            <span>{t.languagePrompt}</span>
+            <span className="font-bold text-vermilion underline decoration-gold decoration-2 underline-offset-4">{t.languageAction}</span>
+          </button>
           <div className="invocation-row mb-10">
             {temple.invocations.map((item) => <span key={item.en}>{item[language]}</span>)}
           </div>
@@ -186,7 +186,11 @@ function Hero({ language }) {
               <h2 className="hero-art__title">{temple.name[language]}</h2>
               <p className="hero-art__address">{temple.address[language]}</p>
             </div>
-            <div className="hero-art__badge"><CalendarDays className="size-5 text-vermilion" /><span>{t.festivalLabel}</span></div>
+            <a href="#gallery" className="hero-art__badge" aria-label={`${t.festivalLabel} — ${t.nav.gallery}`}>
+              <CalendarDays className="size-5 text-vermilion" />
+              <span>{t.festivalLabel}</span>
+              <ArrowUpRight className="size-4 text-vermilion" aria-hidden="true" />
+            </a>
           </div>
         </Reveal>
       </div>
@@ -199,13 +203,12 @@ function Festival({ language }) {
   const stats = [
     { icon: CalendarDays, value: t.date, label: t.dateLabel },
     { icon: Clock3, value: t.annadanam, label: t.annadanamLabel },
-    { icon: Sparkles, value: t.finale, label: t.finaleLabel },
   ]
   return (
     <section id="festival" className="section scroll-mt-24">
       <div className="page-shell">
-        <Reveal><SectionHeading eyebrow={t.festivalLabel} title={t.festivalTitle} body={t.festivalBody} align="center" /></Reveal>
-        <div className="mt-12 grid gap-4 md:grid-cols-3">
+        <Reveal><p className="eyebrow text-center">{t.festivalLabel}</p></Reveal>
+        <div className="mt-8 grid gap-4 md:grid-cols-2">
           {stats.map(({ icon: Icon, value, label }, index) => (
             <Reveal key={label} className="h-full" style={{ transitionDelay: `${index * 80}ms` }}>
               <article className="stat-card h-full">
@@ -233,7 +236,7 @@ function ScheduleSection({ language }) {
       <div className="page-shell grid gap-12 lg:grid-cols-[.72fr_1.28fr] lg:gap-20">
         <Reveal>
           <div className="lg:sticky lg:top-28">
-            <SectionHeading eyebrow={t.scheduleEyebrow} title={t.scheduleTitle} body={t.scheduleBody} />
+            <p className="eyebrow">{t.scheduleEyebrow}</p>
             <div className="mt-8 rounded-3xl bg-vermilion p-6 text-white shadow-[0_20px_50px_rgba(143,38,30,.18)]">
               <p className="text-sm font-bold text-gold-soft">{t.dailyMeals}</p>
               <p className="mt-2 text-lg font-semibold">{t.dailyMealsText}</p>
@@ -261,6 +264,21 @@ function ScheduleSection({ language }) {
                         <span className="text-sm leading-6 text-ink-muted sm:text-base">{event[language]}</span>
                       </div>
                     ))}
+                  </div>
+                  <div className="mt-5 border-t border-ink/8 pt-5">
+                    <p className="flex items-center gap-2 text-xs font-extrabold tracking-[.08em] text-vermilion uppercase">
+                      <Flower2 className="size-4" aria-hidden="true" />
+                      {t.alankaranaDetails}
+                    </p>
+                    <div className="mt-3 grid gap-2 xl:grid-cols-3">
+                      {day.alankaranas.map((alankarana) => (
+                        <article key={alankarana.deity} className="alankarana-card" data-deity={alankarana.deity}>
+                          <p className="text-[.68rem] font-extrabold tracking-[.08em] text-vermilion uppercase">{goddessLabels[alankarana.deity][language]}</p>
+                          <h4 className="mt-2 text-sm font-bold leading-5 text-ink">{alankarana.form[language]}</h4>
+                          <p className="mt-2 text-xs leading-5 text-ink-muted"><span className="font-semibold">{t.sareeColor}:</span> {alankarana.color[language]}</p>
+                        </article>
+                      ))}
+                    </div>
                   </div>
                 </AccordionContent>
               </AccordionItem>
@@ -339,7 +357,17 @@ function PujaSection({ language }) {
           ))}
         </div>
         {!filteredPujas.length && <div className="mt-6 rounded-3xl border border-dashed border-ink/15 p-10 text-center text-sm font-semibold text-ink-muted">{t.noResults}</div>}
-        <div className="mt-6 flex gap-3 rounded-2xl bg-gold-pale p-4 text-sm leading-6 text-ink-muted"><Info className="mt-1 size-4 shrink-0 text-vermilion" /><p>{t.materialNote}</p></div>
+        <aside className="note-card mt-6" aria-label={t.noteLabel}>
+          <Info className="mt-0.5 size-5 shrink-0 text-vermilion" aria-hidden="true" />
+          <div>
+            <p className="text-sm font-extrabold text-ink">{t.noteLabel}</p>
+            <ul className="mt-2 grid gap-2 pl-5 text-sm leading-6 text-ink-muted">
+              {t.materialNote.split(".").map((point) => point.trim()).filter(Boolean).map((point) => (
+                <li key={point} className="list-disc pl-1">{point}.</li>
+              ))}
+            </ul>
+          </div>
+        </aside>
       </div>
     </section>
   )
@@ -354,9 +382,10 @@ function GivingSection({ language }) {
     <section className="section section-dark">
       <div className="page-shell grid items-center gap-12 lg:grid-cols-[.9fr_1.1fr] lg:gap-20">
         <Reveal>
-          <div className="giving-illustration">
-            <HeartHandshake className="size-16 text-gold-soft" strokeWidth={1.3} />
-            <div><p className="text-sm font-bold tracking-[.14em] text-gold uppercase">{t.dailyMeals}</p><p className="mt-3 text-3xl font-bold text-white">{t.annadanam}</p><p className="mt-2 max-w-xs text-sm leading-6 text-white/65">{t.dailyMealsText}</p></div>
+          <div className="giving-summary">
+            <p className="text-sm font-bold tracking-[.14em] text-gold uppercase">{t.dailyMeals}</p>
+            <p className="mt-3 text-3xl font-bold text-white">{t.annadanam}</p>
+            <p className="mt-2 max-w-xs text-sm leading-6 text-white/65">{t.dailyMealsText}</p>
           </div>
         </Reveal>
         <Reveal>
@@ -385,7 +414,13 @@ function GallerySection({ language }) {
               <Dialog>
                 <DialogTrigger asChild>
                   <button type="button" className="poster-card group w-full text-left outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-4">
-                    <img src={poster.src} alt={poster.alt[language]} className="aspect-[3/4] w-full object-cover object-top" />
+                    <img
+                      src={poster.src}
+                      alt={poster.alt[language]}
+                      className="aspect-[3/4] w-full bg-ivory object-contain object-center"
+                      loading="lazy"
+                      decoding="async"
+                    />
                     <span className="flex items-center justify-between gap-3 p-4"><span className="text-sm font-bold text-ink">{poster.title[language]}</span><ArrowUpRight className="size-4 shrink-0 text-vermilion transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" /></span>
                   </button>
                 </DialogTrigger>
@@ -446,10 +481,32 @@ function Footer({ language }) {
   return (
     <footer className="border-t border-ink/8 bg-gold-pale/45 py-10">
       <div className="page-shell flex flex-col items-center justify-between gap-6 text-center sm:flex-row sm:text-left">
-        <div className="flex items-center gap-3"><TempleMark className="scale-[.58]" /><div><p className="font-bold text-ink">{temple.name[language]}</p><p className="mt-1 text-xs text-ink-muted">{t.footer}</p></div></div>
+        <div><p className="font-bold text-ink">{temple.name[language]}</p><p className="mt-1 text-xs text-ink-muted">{t.footer}</p></div>
         <p className="max-w-sm text-xs leading-5 text-ink-faint sm:text-right">{t.sourceNote}</p>
       </div>
     </footer>
+  )
+}
+
+function BackToTop() {
+  const [visible, setVisible] = useState(false)
+
+  useEffect(() => {
+    const updateVisibility = () => setVisible(window.scrollY > 500)
+    updateVisibility()
+    window.addEventListener("scroll", updateVisibility, { passive: true })
+    return () => window.removeEventListener("scroll", updateVisibility)
+  }, [])
+
+  const scrollToTop = () => {
+    const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches
+    window.scrollTo({ top: 0, behavior: reduceMotion ? "auto" : "smooth" })
+  }
+
+  return (
+    <button type="button" className="back-to-top" data-visible={visible} onClick={scrollToTop} aria-label="Back to top" tabIndex={visible ? 0 : -1}>
+      <ArrowUp className="size-5" aria-hidden="true" />
+    </button>
   )
 }
 
@@ -460,7 +517,7 @@ export default function App() {
       <a href="#main" className="skip-link">Skip to content</a>
       <Header language={language} setLanguage={setLanguage} />
       <main id="main">
-        <Hero language={language} />
+        <Hero language={language} setLanguage={setLanguage} />
         <Festival language={language} />
         <ScheduleSection language={language} />
         <PujaSection language={language} />
@@ -469,6 +526,7 @@ export default function App() {
         <VisitSection language={language} />
       </main>
       <Footer language={language} />
+      <BackToTop />
     </>
   )
 }

@@ -19,6 +19,8 @@ export const copy = {
   en: {
     nav: { festival: "Festival", schedule: "Schedule", pujas: "Pujas", gallery: "Posters", visit: "Visit" },
     language: "తెలుగు",
+    languagePrompt: "Prefer Telugu?",
+    languageAction: "తెలుగులో చూడండి",
     sacredLine: "Sri Maha Ganapathaye Namaha · Sri Guruve Namaha · Sri Maha Durgadeviye Namaha",
     eyebrowTitle: "Dussehra celebrations",
     eyebrowDate: "11th - 20th October 2026",
@@ -41,6 +43,8 @@ export const copy = {
     morning: "Morning",
     evening: "Evening",
     allDay: "Festival day",
+    alankaranaDetails: "Goddess alankaranas",
+    sareeColor: "Saree colour",
     pujaEyebrow: "Offerings & seva",
     pujaTitle: "Special pujas and rates",
     pujaBody: "Rates published for the Dussehra period. Sarees and any specifically noted personal materials are separate.",
@@ -55,12 +59,13 @@ export const copy = {
     astami: "Ashtami–Dasami",
     rate: "Rate",
     noResults: "No pujas match your search.",
-    materialNote: "Puja items are provided by the temple committee. Participants should arrange flowers and a kalasa chembu for Manidweepa Varnarchana, and the materials required for Aksharabhyasam and vehicle pujas.",
+    noteLabel: "Note",
+    materialNote: "Puja items are provided by the temple committee. Participants should bring flowers and a kalasa chembu for Manidweepa Varnarchana. Participants should bring the materials required for Aksharabhyasam and vehicle pujas.",
     givingEyebrow: "Service",
     givingTitle: "Annadanam and compassionate giving",
     givingBody: "Daily annadanam is offered during the festival. The committee also publishes options for supporting cow feeding and care.",
     dailyMeals: "Daily annadanam",
-    dailyMealsText: "Served in the temple premises every festival day from noon to 2 PM.",
+    dailyMealsText: "Served in the temple premises every festival day from 12 to 2 PM.",
     cowDonation: "Govu Grasam",
     perDay: "Per day",
     perMonth: "Per month",
@@ -88,6 +93,8 @@ export const copy = {
   te: {
     nav: { festival: "ఉత్సవం", schedule: "కార్యక్రమం", pujas: "పూజలు", gallery: "పోస్టర్లు", visit: "దర్శనం" },
     language: "English",
+    languagePrompt: "Prefer English?",
+    languageAction: "View in English",
     sacredLine: "శ్రీ మహాగణపతయే నమః · శ్రీ గురువే నమః · శ్రీ మహాదుర్గాదేవ్యై నమః",
     eyebrowTitle: "దసరా మహోత్సవాలు",
     eyebrowDate: "11–20 అక్టోబర్ 2026",
@@ -110,6 +117,8 @@ export const copy = {
     morning: "ఉదయం",
     evening: "సాయంత్రం",
     allDay: "ఉత్సవ రోజు",
+    alankaranaDetails: "అమ్మవార్ల అవతార అలంకరణలు",
+    sareeColor: "చీర రంగు",
     pujaEyebrow: "పూజలు & సేవలు",
     pujaTitle: "ప్రత్యేక పూజలు మరియు రుసుములు",
     pujaBody: "దసరా ఉత్సవాల కోసం ప్రకటించిన రుసుములు. చీరలు మరియు ప్రత్యేకంగా పేర్కొన్న వ్యక్తిగత సామగ్రి వేరు.",
@@ -124,7 +133,8 @@ export const copy = {
     astami: "అష్టమి–దశమి",
     rate: "రుసుము",
     noResults: "మీ వెతుకులాటకు పూజలు లభించలేదు.",
-    materialNote: "పూజా సామగ్రిని ఆలయ కమిటీ అందిస్తుంది. మణిద్వీప వర్ణార్చనకు పూలు, కలశ చెంబు; అక్షరాభ్యాసం మరియు వాహన పూజలకు అవసరమైన సామగ్రిని భక్తులు తెచ్చుకోవాలి.",
+    noteLabel: "గమనిక",
+    materialNote: "పూజా సామగ్రిని ఆలయ కమిటీ అందిస్తుంది. మణిద్వీప వర్ణార్చనకు పూలు, కలశ చెంబును భక్తులు తీసుకురావాలి. అక్షరాభ్యాసం మరియు వాహన పూజలకు అవసరమైన సామగ్రిని భక్తులు తీసుకురావాలి.",
     givingEyebrow: "సేవ",
     givingTitle: "అన్నదానం మరియు గోసేవ",
     givingBody: "ఉత్సవాల సమయంలో ప్రతిరోజు అన్నదానం జరుగుతుంది. గోవులకు గ్రాసం మరియు సంరక్షణ కోసం విరాళాల వివరాలు కూడా ప్రకటించబడ్డాయి.",
@@ -164,6 +174,11 @@ export const schedule = [
       { time: "10:30 AM", en: "Special darshan of the goddesses", te: "అమ్మవార్ల విశేష దర్శనం" },
       { time: "6:30 PM", en: "Collective Sahasra Kumkumarchana", te: "స్త్రీలచే సామూహిక సహస్ర కుంకుమార్చన" },
     ],
+    alankaranas: [
+      { deity: "mahakali", form: { en: "Bala Tripura Sundari Devi", te: "శ్రీ బాలా త్రిపుర సుందరి దేవి" }, color: { en: "Green", te: "ఆకుపచ్చ" } },
+      { deity: "mahalakshmi", form: { en: "Adi Lakshmi Devi", te: "శ్రీ ఆదిలక్ష్మీ దేవి" }, color: { en: "Coffee brown", te: "కాఫీ బ్రౌన్" } },
+      { deity: "mahasaraswati", form: { en: "Bharati Devi", te: "శ్రీ భారతీ దేవి" }, color: { en: "White", te: "తెలుపు" } },
+    ],
   },
   {
     date: "2026-10-12", day: { en: "Monday", te: "సోమవారం" },
@@ -171,6 +186,11 @@ export const schedule = [
     events: [
       { time: "10:30 AM", en: "Sahasra Sampenga flower offering", te: "సహస్ర సంపెంగ పుష్పార్చన" },
       { time: "6:30 PM", en: "Collective Sahasra Kumkumarchana", te: "స్త్రీలచే సామూహిక సహస్ర కుంకుమార్చన" },
+    ],
+    alankaranas: [
+      { deity: "mahakali", form: { en: "Gayatri Devi", te: "శ్రీ గాయత్రీ దేవి" }, color: { en: "Dark red", te: "ముదురు ఎరుపు" } },
+      { deity: "mahalakshmi", form: { en: "Vidya Lakshmi Devi", te: "శ్రీ విద్యాలక్ష్మీ దేవి" }, color: { en: "Pink", te: "గులాబి" } },
+      { deity: "mahasaraswati", form: { en: "Saraswati Devi", te: "శ్రీ సరస్వతీ దేవి" }, color: { en: "Green", te: "ఆకుపచ్చ" } },
     ],
   },
   {
@@ -180,6 +200,11 @@ export const schedule = [
       { time: "10:30 AM", en: "Sahasrarchana to Maa Trishakti with bangles", te: "అమ్మవారికి గాజులతో సహస్రార్చన" },
       { time: "6:30 PM", en: "Collective Sahasra Kumkumarchana", te: "స్త్రీలచే సామూహిక సహస్ర కుంకుమార్చన" },
     ],
+    alankaranas: [
+      { deity: "mahakali", form: { en: "Annapurna Devi", te: "శ్రీ అన్నపూర్ణా దేవి" }, color: { en: "Light yellow", te: "లేత పసుపు" } },
+      { deity: "mahalakshmi", form: { en: "Dhairya Lakshmi Devi", te: "శ్రీ ధైర్యలక్ష్మీ దేవి" }, color: { en: "Green", te: "ఆకుపచ్చ" } },
+      { deity: "mahasaraswati", form: { en: "Sharada Devi", te: "శ్రీ శారదా దేవి" }, color: { en: "Pink", te: "గులాబి" } },
+    ],
   },
   {
     date: "2026-10-14", day: { en: "Wednesday", te: "బుధవారం" },
@@ -188,6 +213,11 @@ export const schedule = [
       { time: "10:30 AM", en: "Sahasrarchana with turmeric pieces", te: "పసుపు కొమ్ములతో సహస్రార్చన" },
       { time: "6:30 PM", en: "Collective Sahasra Kumkumarchana", te: "స్త్రీలచే సామూహిక సహస్ర కుంకుమార్చన" },
     ],
+    alankaranas: [
+      { deity: "mahakali", form: { en: "Mahagauri Devi", te: "శ్రీ మహాగౌరీ దేవి" }, color: { en: "Green", te: "ఆకుపచ్చ" } },
+      { deity: "mahalakshmi", form: { en: "Gaja Lakshmi Devi", te: "శ్రీ గజలక్ష్మీ దేవి" }, color: { en: "Pink", te: "గులాబి" } },
+      { deity: "mahasaraswati", form: { en: "Hamsavahini Devi", te: "శ్రీ హంసవాహిని దేవి" }, color: { en: "White / cream", te: "తెలుపు / క్రీమ్" } },
+    ],
   },
   {
     date: "2026-10-15", day: { en: "Thursday", te: "గురువారం" },
@@ -195,6 +225,11 @@ export const schedule = [
     events: [
       { time: "10:30 AM", en: "Offering of one thousand lotus flowers", te: "సహస్ర కమల (తామర) పుష్పార్చన" },
       { time: "6:30 PM", en: "Collective Sahasra Kumkumarchana", te: "స్త్రీలచే సామూహిక సహస్ర కుంకుమార్చన" },
+    ],
+    alankaranas: [
+      { deity: "mahakali", form: { en: "Lalita Tripura Sundari Devi", te: "శ్రీ లలితా త్రిపుర సుందరి దేవి" }, color: { en: "Pink", te: "గులాబి" } },
+      { deity: "mahalakshmi", form: { en: "Santana Lakshmi Devi", te: "శ్రీ సంతానలక్ష్మీ దేవి" }, color: { en: "Green", te: "ఆకుపచ్చ" } },
+      { deity: "mahasaraswati", form: { en: "Jaganmohini Devi", te: "శ్రీ జగన్మోహినీ దేవి" }, color: { en: "Dark red", te: "ముదురు ఎరుపు" } },
     ],
   },
   {
@@ -205,6 +240,11 @@ export const schedule = [
       { time: "5:30 PM", en: "Collective Saraswati Puja", te: "సామూహిక సరస్వతి పూజ" },
       { time: "6:30 PM", en: "Sahasra Swethakusumarchana", te: "సహస్ర శ్వేత కుసుమార్చన" },
     ],
+    alankaranas: [
+      { deity: "mahakali", form: { en: "Maha Saraswati Devi", te: "శ్రీ మహా సరస్వతీ దేవి" }, color: { en: "Kanakambaram orange", te: "కనకాంబరం" } },
+      { deity: "mahalakshmi", form: { en: "Dhana Lakshmi Devi", te: "శ్రీ ధనలక్ష్మీ దేవి" }, color: { en: "Pink", te: "గులాబి" } },
+      { deity: "mahasaraswati", form: { en: "Vagishwari Devi", te: "శ్రీ వాగీశ్వరీ దేవి" }, color: { en: "Yellow", te: "పసుపు" } },
+    ],
   },
   {
     date: "2026-10-17", day: { en: "Saturday", te: "శనివారం" },
@@ -212,6 +252,11 @@ export const schedule = [
     events: [
       { time: "10:30 AM", en: "Collective Manidweepa Varnarchana (Kalasa Puja)", te: "సామూహిక మణిద్వీప వర్ణార్చన (కలశ పూజ)" },
       { time: "6:30 PM", en: "Collective flower worship", te: "సామూహిక పుష్పార్చన" },
+    ],
+    alankaranas: [
+      { deity: "mahakali", form: { en: "Matangi Devi", te: "శ్రీ మాతంగినీ దేవి" }, color: { en: "Pink", te: "గులాబి" } },
+      { deity: "mahalakshmi", form: { en: "Dhanya Lakshmi Devi", te: "శ్రీ ధాన్యలక్ష్మీ దేవి" }, color: { en: "Orange", te: "నారింజ" } },
+      { deity: "mahasaraswati", form: { en: "Kaumari Devi", te: "శ్రీ కౌమారీ దేవి" }, color: { en: "Dark red", te: "ముదురు ఎరుపు" } },
     ],
   },
   {
@@ -221,6 +266,11 @@ export const schedule = [
       { time: "10:30 AM", en: "Offering of one thousand roses", te: "సహస్ర గులాబి పుష్పార్చన" },
       { time: "6:30 PM", en: "Collective Sahasra Kumkumarchana", te: "స్త్రీలచే సామూహిక సహస్ర కుంకుమార్చన" },
     ],
+    alankaranas: [
+      { deity: "mahakali", form: { en: "Maha Durga Devi", te: "శ్రీ మహా దుర్గా దేవి" }, color: { en: "Red", te: "ఎరుపు" } },
+      { deity: "mahalakshmi", form: { en: "Vijaya Lakshmi Devi", te: "శ్రీ విజయలక్ష్మీ దేవి" }, color: { en: "Pink", te: "గులాబి" } },
+      { deity: "mahasaraswati", form: { en: "Brahmacharini Devi", te: "శ్రీ బ్రహ్మచారిణి దేవి" }, color: { en: "Saffron", te: "కాషాయం" } },
+    ],
   },
   {
     date: "2026-10-19", day: { en: "Monday · Navami", te: "సోమవారం · నవమి" },
@@ -228,6 +278,11 @@ export const schedule = [
     events: [
       { time: "10:30 AM", en: "Worship with a variety of fruits", te: "వివిధ ఫలాలతో సహస్రార్చన" },
       { time: "6:30 PM", en: "Collective Sahasra Kumkumarchana", te: "స్త్రీలచే సామూహిక సహస్ర కుంకుమార్చన" },
+    ],
+    alankaranas: [
+      { deity: "mahakali", form: { en: "Mahishasura Mardini Devi", te: "శ్రీ మహిషాసురమర్దిని దేవి" }, color: { en: "Green", te: "ఆకుపచ్చ" } },
+      { deity: "mahalakshmi", form: { en: "Maha Lakshmi Devi", te: "శ్రీ మహాలక్ష్మీ దేవి" }, color: { en: "Pink", te: "గులాబి" } },
+      { deity: "mahasaraswati", form: { en: "Brahmani Devi", te: "శ్రీ బ్రహ్మాణీ దేవి" }, color: { en: "Kanakambaram orange", te: "కనకాంబరం" } },
     ],
   },
   {
@@ -238,8 +293,19 @@ export const schedule = [
       { time: "12:01 PM", en: "Navachandi Yagam Maha Purnahuti", te: "నవచండీ యాగ మహా పూర్ణాహుతి" },
       { time: "7:00 PM", en: "Shami Puja (Jammi Puja)", te: "శమీపూజ (జమ్మి పూజ)" },
     ],
+    alankaranas: [
+      { deity: "mahakali", form: { en: "Raja Rajeshwari Devi", te: "శ్రీ రాజరాజేశ్వరీ దేవి" }, color: { en: "Pink", te: "గులాబి" } },
+      { deity: "mahalakshmi", form: { en: "Aishwarya Lakshmi Devi", te: "శ్రీ ఐశ్వర్యలక్ష్మీ దేవి" }, color: { en: "Golden", te: "బంగారు వర్ణం" } },
+      { deity: "mahasaraswati", form: { en: "Aparajita Devi", te: "శ్రీ అపరాజితా దేవి" }, color: { en: "Green", te: "ఆకుపచ్చ" } },
+    ],
   },
 ]
+
+export const goddessLabels = {
+  mahakali: { en: "Sri Mahakali Devi", te: "శ్రీ మహాకాళీ దేవి" },
+  mahalakshmi: { en: "Sri Mahalakshmi Devi", te: "శ్రీ మహాలక్ష్మీ దేవి" },
+  mahasaraswati: { en: "Sri Mahasaraswati Devi", te: "శ్రీ మహాసరస్వతీ దేవి" },
+}
 
 export const pujas = [
   { id: 1, category: "alankarana", en: "Nitya Avatara-Alankarana Seva to one goddess", te: "ఒక అమ్మవారికి నిత్య అవతార అలంకరణ సేవ", early: 3501, late: 6003, note: { en: "Saree separate", te: "చీర వేరు" } },
@@ -275,23 +341,43 @@ export const contacts = {
 
 export const posters = [
   {
-    src: "/posters/festival-highlights.svg",
-    title: { en: "Festival highlights", te: "ఉత్సవ ముఖ్యాంశాలు" },
-    alt: { en: "Dussehra 2026 festival highlights announcement", te: "2026 దసరా ఉత్సవ ముఖ్యాంశాల ప్రకటన" },
+    src: "/posters/poster-1.jpeg",
+    title: { en: "Aksharabhyasam & Vijayadashami", te: "అక్షరాభ్యాసం & విజయదశమి" },
+    alt: {
+      en: "Telugu announcement for Aksharabhyasam, Saraswati Puja and Vijayadashami at Trishakti Devalayam",
+      te: "త్రిశక్తి దేవాలయంలో అక్షరాభ్యాసం, సరస్వతి పూజ మరియు విజయదశమి ప్రకటన",
+    },
   },
   {
-    src: "/posters/annadanam.svg",
+    src: "/posters/poster-2.jpeg",
     title: { en: "Annadanam announcement", te: "అన్నదాన ప్రకటన" },
-    alt: { en: "Free daily annadanam announcement", te: "ప్రతిరోజు ఉచిత అన్నదాన ప్రకటన" },
+    alt: {
+      en: "Telugu announcement for free daily annadanam during the 2026 Dussehra festival",
+      te: "2026 దసరా మహోత్సవాల్లో ప్రతిరోజు ఉచిత అన్నదాన ప్రకటన",
+    },
   },
   {
-    src: "/posters/daily-schedule.svg",
+    src: "/posters/poster-3.jpeg",
     title: { en: "Daily worship schedule", te: "రోజువారీ పూజల వివరాలు" },
-    alt: { en: "Daily Dussehra worship schedule", te: "దసరా రోజువారీ పూజల పట్టిక" },
+    alt: {
+      en: "Date-wise Dussehra worship and goddess alankarana schedule from 11 to 20 October 2026",
+      te: "2026 అక్టోబర్ 11 నుంచి 20 వరకు తేదీల వారీగా దసరా పూజలు మరియు అమ్మవార్ల అలంకరణల పట్టిక",
+    },
   },
   {
-    src: "/posters/puja-rates.svg",
+    src: "/posters/poster-4.jpeg",
     title: { en: "Special pujas and rates", te: "ప్రత్యేక పూజలు మరియు రుసుములు" },
-    alt: { en: "Special pujas and published rates", te: "ప్రత్యేక పూజలు మరియు ప్రకటించిన రుసుములు" },
+    alt: {
+      en: "English announcement listing 23 special Dussehra pujas and their published rates",
+      te: "23 ప్రత్యేక దసరా పూజలు మరియు ప్రకటించిన రుసుముల ఆంగ్ల ప్రకటన",
+    },
+  },
+  {
+    src: "/posters/poster-5.jpeg",
+    title: { en: "Dussehra festival programme", te: "దసరా మహోత్సవ కార్యక్రమం" },
+    alt: {
+      en: "Telugu announcement for the 2026 Dussehra Mahotsavam and Navachandi Yagam programme",
+      te: "2026 దసరా మహోత్సవం మరియు నవచండీ యాగం కార్యక్రమ ప్రకటన",
+    },
   },
 ]
