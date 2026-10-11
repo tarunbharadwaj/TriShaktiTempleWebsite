@@ -25,12 +25,12 @@ export const copy = {
     eyebrowTitle: "Dussehra celebrations",
     eyebrowDate: "11th - 20th October 2026",
     heroTitle: "Ten sacred days. One community in devotion.",
-    heroBody: "Join the annual Dussehra celebrations with daily alankaranas, collective worship, annadanam, and the daily Maha Chandi Homam.",
+    heroBody: "Join the annual Dussehra celebrations with daily alankaranas, Samuhika Kumkamacharna Puja, Anna Samaradhana for Bhavani Deeksha devotees, and the daily Maha Chandi Homam.",
     viewSchedule: "View festival schedule",
     explorePujas: "Explore special pujas",
     festivalLabel: "2026 Dussehra Mahotsavam",
     festivalTitle: "A ten-day journey of worship",
-    festivalBody: "Each day brings a distinct offering and alankarana for the three goddesses, culminating in Vijayadashami on 20 October.",
+    festivalBody: "Each day brings a distinct offering and alankarana for the three Goddesses, culminating in Vijayadashami on 20 October.",
     date: "11–20 Oct",
     dateLabel: "Festival dates",
     annadanam: "12–2 PM",
@@ -45,6 +45,7 @@ export const copy = {
     allDay: "Festival day",
     alankaranaDetails: "Goddess alankaranas",
     sareeColor: "Saree colour",
+    programmeSevaDetails: "Seva details",
     pujaEyebrow: "Offerings & seva",
     pujaTitle: "Special pujas and rates",
     pujaBody: "Rates published for the Dussehra period. Sarees and any specifically noted personal materials are separate.",
@@ -88,7 +89,8 @@ export const copy = {
     directions: "Open in Google Maps",
     informationOnly: "For festival information, please contact the committee using the published numbers.",
     footer: "May the blessings of Trishakti bring peace and prosperity to all.",
-    sourceNote: "Festival information reproduced from the 2026 temple announcements.",
+    footerCredit: "Built with devotion by a",
+    footerCreditLink: "Devotee",
   },
   te: {
     nav: { festival: "ఉత్సవం", schedule: "కార్యక్రమం", pujas: "పూజలు", gallery: "పోస్టర్లు", visit: "దర్శనం" },
@@ -99,7 +101,7 @@ export const copy = {
     eyebrowTitle: "దసరా మహోత్సవాలు",
     eyebrowDate: "11–20 అక్టోబర్ 2026",
     heroTitle: "పది పవిత్ర రోజులు. భక్తితో ఒక్కటయ్యే సమాజం.",
-    heroBody: "ప్రతిరోజు అలంకరణలు, సామూహిక పూజలు, అన్నదానం మరియు మహాచండీ హోమంతో జరిగే దసరా మహోత్సవాలకు స్వాగతం.",
+    heroBody: "ప్రతిరోజు అలంకరణలు, సామూహిక కుంకుమార్చన పూజ, భవానీ దీక్ష భక్తులకు అన్న సమారాధన మరియు మహాచండీ హోమంతో జరిగే దసరా మహోత్సవాలకు స్వాగతం.",
     viewSchedule: "ఉత్సవ కార్యక్రమం చూడండి",
     explorePujas: "ప్రత్యేక పూజలు చూడండి",
     festivalLabel: "2026 దసరా మహోత్సవం",
@@ -119,6 +121,7 @@ export const copy = {
     allDay: "ఉత్సవ రోజు",
     alankaranaDetails: "అమ్మవార్ల అవతార అలంకరణలు",
     sareeColor: "చీర రంగు",
+    programmeSevaDetails: "సేవా వివరాలు",
     pujaEyebrow: "పూజలు & సేవలు",
     pujaTitle: "ప్రత్యేక పూజలు మరియు రుసుములు",
     pujaBody: "దసరా ఉత్సవాల కోసం ప్రకటించిన రుసుములు. చీరలు మరియు ప్రత్యేకంగా పేర్కొన్న వ్యక్తిగత సామగ్రి వేరు.",
@@ -162,7 +165,8 @@ export const copy = {
     directions: "గూగుల్ మ్యాప్స్‌లో చూడండి",
     informationOnly: "ఉత్సవ వివరాల కోసం ప్రకటించిన నంబర్ల ద్వారా కమిటీని సంప్రదించండి.",
     footer: "త్రిశక్తి అమ్మవారి ఆశీస్సులతో అందరికీ శాంతి, శుభం కలగాలి.",
-    sourceNote: "2026 ఆలయ ప్రకటనల ఆధారంగా ఉత్సవ సమాచారం అందించబడింది.",
+    footerCredit: "భక్తితో నిర్మించిన వారు:",
+    footerCreditLink: "ఒక భక్తుడు",
   },
 }
 
@@ -171,13 +175,94 @@ export const schedule = [
     date: "2026-10-11", day: { en: "Sunday", te: "ఆదివారం" },
     title: { en: "Festival opening & special darshan", te: "ఉత్సవ ప్రారంభం మరియు విశేష దర్శనం" },
     events: [
-      { time: "10:30 AM", en: "Special darshan of the goddesses", te: "అమ్మవార్ల విశేష దర్శనం" },
+      { time: "10:30 AM", en: "Special darshan of the Goddesses", te: "అమ్మవార్ల విశేష దర్శనం" },
       { time: "6:30 PM", en: "Collective Sahasra Kumkumarchana", te: "స్త్రీలచే సామూహిక సహస్ర కుంకుమార్చన" },
     ],
     alankaranas: [
-      { deity: "mahakali", form: { en: "Bala Tripura Sundari Devi", te: "శ్రీ బాలా త్రిపుర సుందరి దేవి" }, color: { en: "Green", te: "ఆకుపచ్చ" } },
-      { deity: "mahalakshmi", form: { en: "Adi Lakshmi Devi", te: "శ్రీ ఆదిలక్ష్మీ దేవి" }, color: { en: "Coffee brown", te: "కాఫీ బ్రౌన్" } },
-      { deity: "mahasaraswati", form: { en: "Bharati Devi", te: "శ్రీ భారతీ దేవి" }, color: { en: "White", te: "తెలుపు" } },
+      {
+        deity: "mahakali",
+        form: { en: "Sri Bala Tripura Sundari Devi", te: "శ్రీ బాలా త్రిపుర సుందరి దేవి" },
+        color: { en: "Green", te: "ఆకుపచ్చ" },
+        image: "/goddesses/11-bala-tripura-sundari.jpeg",
+        programmeDetails: [
+          {
+            service: { en: "Special avataram", te: "విశేష అవతారము" },
+            gotram: { en: "Sudarshana Gotram", te: "సుదర్శన గోత్రం" },
+            devotees: { en: "Trivikrama Nagarjuna Kumar, Lakshmi Bhargavi, Ishan Nandan", te: "త్రివిక్రమ నాగార్జున కుమార్, లక్ష్మీ భార్గవి, ఇషాన్ నందన్" },
+          },
+          {
+            service: { en: "Gajamala seva", te: "గజమాల సేవ" },
+            gotram: { en: "Sudarshana Gotram", te: "సుదర్శన గోత్రం" },
+            devotees: { en: "Trivikrama Nagarjuna Kumar, Lakshmi Bhargavi, Ishan Nandan", te: "త్రివిక్రమ నాగార్జున కుమార్, లక్ష్మీ భార్గవి, ఇషాన్ నందన్" },
+          },
+          {
+            service: { en: "Flower decoration", te: "పుష్ప అలంకారము" },
+            gotram: { en: "Sudarshana Gotram", te: "సుదర్శన గోత్రం" },
+            devotees: { en: "Trivikrama Nagarjuna Kumar, Lakshmi Bhargavi, Ishan Nandan", te: "త్రివిక్రమ నాగార్జున కుమార్, లక్ష్మీ భార్గవి, ఇషాన్ నందన్" },
+          },
+          {
+            service: { en: "Special flower decoration", te: "విశేష పుష్పాలంకరణ" },
+            gotram: { en: "Paidipala Gotram", te: "పైడిపాల గోత్రం" },
+            devotees: { en: "Raju – Jyothi, Jahnavi Eswari", te: "రాజు – జ్యోతి, చి|| జాహ్నవీశ్వరి" },
+          },
+        ],
+      },
+      {
+        deity: "mahalakshmi",
+        form: { en: "Sri Adi Lakshmi Devi", te: "శ్రీ ఆదిలక్ష్మీ దేవి" },
+        color: { en: "Coffee brown", te: "కాఫీ బ్రౌన్" },
+        image: "/goddesses/11-adi-lakshmi.jpeg",
+        programmeDetails: [
+          {
+            service: { en: "Special avataram", te: "విశేష అవతారము" },
+            gotram: { en: "Paidipala Gotram", te: "పైడిపాల గోత్రం" },
+            devotees: { en: "Uma Maheswara Rao – Nagalakshmi, Bala Venkat, Sashikiran, Rajaratnam", te: "ఉమా మహేశ్వరరావు – నాగలక్ష్మి, చి|| బాలవెంకట్, చి|| శశికిరణ్, రాజారత్నం" },
+          },
+          {
+            service: { en: "Gajamala seva", te: "గజమాల సేవ" },
+            gotram: { en: "Paidipala Gotram", te: "పైడిపాల గోత్రం" },
+            devotees: { en: "Venkateswara Rao – Rukmini, Sai Charan", te: "వెంకటేశ్వరరావు – రుక్మిణి, చి|| సాయి చరణ్" },
+          },
+          {
+            service: { en: "Flower decoration", te: "పుష్ప అలంకారము" },
+            gotram: { en: "Nagula Gotram", te: "నాగుల గోత్రం" },
+            devotees: { en: "Srinivas, Kodandaveni, Treyans, Suryans", te: "శ్రీనివాస్, కోదండవేణి, త్రయాన్స్, సూర్యాన్స్" },
+          },
+          {
+            service: { en: "Special flower decoration", te: "విశేష పుష్పాలంకరణ" },
+            gotram: { en: "Paidipala Gotram", te: "పైడిపాల గోత్రం" },
+            devotees: { en: "Satish, Surya Vasantha Rani, Lalith Kalyani", te: "సతీష్, సూర్యవసంతరాణి, లలిత్ కళ్యాణి" },
+          },
+        ],
+      },
+      {
+        deity: "mahasaraswati",
+        form: { en: "Sri Bharathi Devi", te: "శ్రీ భారతీ దేవి" },
+        color: { en: "White", te: "తెలుపు" },
+        image: "/goddesses/11-adi-lakshmi.jpeg",
+        programmeDetails: [
+          {
+            service: { en: "Special avataram", te: "విశేష అవతారము" },
+            gotram: { en: "Sri Vatsasa Gotram", te: "శ్రీ వత్సస గోత్రం" },
+            devotees: { en: "Dileep Kumar, Swarnalatha, Sachi, Rohith", te: "దిలీప్ కుమార్, స్వర్ణలత, చి|| సాచి, చి|| రోహిత్" },
+          },
+          {
+            service: { en: "Gajamala seva", te: "గజమాల సేవ" },
+            gotram: { en: "Paidipala Gotram", te: "పైడిపాల గోత్రం" },
+            devotees: { en: "Charan Kumar – Surya Kumari", te: "చరణ్ కుమార్ – సూర్యకుమారి" },
+          },
+          {
+            service: { en: "Flower decoration", te: "పుష్ప అలంకారము" },
+            gotram: { en: "Desetti Gotram", te: "దేశెట్టి గోత్రం" },
+            devotees: { en: "Panduranga Rao, Kumari Chetan Raghav", te: "పాండురంగారావు, కుమారి చేతన్ రాఘవ్" },
+          },
+          {
+            service: { en: "Special flower decoration", te: "విశేష పుష్పాలంకరణ" },
+            gotram: { en: "Kashyapasa Gotram", te: "కాశ్యపస గోత్రం" },
+            devotees: { en: "Venkata Subrahmanyeswara Mohan Rao, Lalitha Kumari", te: "వెంకట సుబ్రహ్మణ్యేశ్వర మోహనరావు, లలితా కుమారి" },
+          },
+        ],
+      },
     ],
   },
   {
@@ -302,16 +387,16 @@ export const schedule = [
 ]
 
 export const goddessLabels = {
-  mahakali: { en: "Sri Mahakali Devi", te: "శ్రీ మహాకాళీ దేవి" },
+  mahakali: { en: "Sri MahaDurga Devi", te: "శ్రీ మహాదుర్గా దేవి" },
   mahalakshmi: { en: "Sri Mahalakshmi Devi", te: "శ్రీ మహాలక్ష్మీ దేవి" },
   mahasaraswati: { en: "Sri Mahasaraswati Devi", te: "శ్రీ మహాసరస్వతీ దేవి" },
 }
 
 export const pujas = [
-  { id: 1, category: "alankarana", en: "Nitya Avatara-Alankarana Seva to one goddess", te: "ఒక అమ్మవారికి నిత్య అవతార అలంకరణ సేవ", early: 3501, late: 6003, note: { en: "Saree separate", te: "చీర వేరు" } },
-  { id: 2, category: "alankarana", en: "Gajamala-alankarana to one goddess", te: "ఒక అమ్మవారికి గజమాల అలంకరణ", early: 2502, late: 4500 },
-  { id: 3, category: "alankarana", en: "Pushpa-alankarana to one goddess", te: "ఒక అమ్మవారికి పుష్పాలంకరణ", early: 2502, late: 4500 },
-  { id: 4, category: "alankarana", en: "Vishesha Pushpa-alankarana to one goddess", te: "ఒక అమ్మవారికి విశేష పుష్పాలంకరణ", early: 2502, late: 4500 },
+  { id: 1, category: "alankarana", en: "Nitya Avatara-Alankarana Seva to one Goddess", te: "ఒక అమ్మవారికి నిత్య అవతార అలంకరణ సేవ", early: 3501, late: 6003, note: { en: "Saree separate", te: "చీర వేరు" } },
+  { id: 2, category: "alankarana", en: "Gajamala-alankarana to one Goddess", te: "ఒక అమ్మవారికి గజమాల అలంకరణ", early: 2502, late: 4500 },
+  { id: 3, category: "alankarana", en: "Pushpa-alankarana to one Goddess", te: "ఒక అమ్మవారికి పుష్పాలంకరణ", early: 2502, late: 4500 },
+  { id: 4, category: "alankarana", en: "Vishesha Pushpa-alankarana to one Goddess", te: "ఒక అమ్మవారికి విశేష పుష్పాలంకరణ", early: 2502, late: 4500 },
   { id: 5, category: "seva", en: "Arjitha Prasada Vitharana (one day)", te: "ఆర్జిత ప్రసాద వితరణ (ఒక రోజు)", price: 2000 },
   { id: 6, category: "archana", en: "Archana with gothra and name — morning & evening", te: "గోత్రనామాలతో అర్చన — ఉదయం & సాయంత్రం", price: 500 },
   { id: 7, category: "archana", en: "Samoohika Kumkuma-archana — one time", te: "సామూహిక కుంకుమార్చన — ఒకసారి", price: 100 },
@@ -360,7 +445,7 @@ export const posters = [
     src: "/posters/poster-3.jpeg",
     title: { en: "Daily worship schedule", te: "రోజువారీ పూజల వివరాలు" },
     alt: {
-      en: "Date-wise Dussehra worship and goddess alankarana schedule from 11 to 20 October 2026",
+      en: "Date-wise Dussehra worship and Goddess alankarana schedule from 11 to 20 October 2026",
       te: "2026 అక్టోబర్ 11 నుంచి 20 వరకు తేదీల వారీగా దసరా పూజలు మరియు అమ్మవార్ల అలంకరణల పట్టిక",
     },
   },

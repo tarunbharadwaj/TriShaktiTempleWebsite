@@ -270,12 +270,41 @@ function ScheduleSection({ language }) {
                       <Flower2 className="size-4" aria-hidden="true" />
                       {t.alankaranaDetails}
                     </p>
-                    <div className="mt-3 grid gap-2 xl:grid-cols-3">
+                    <div className={cn("mt-3 grid gap-2", !day.alankaranas.some((item) => item.programmeDetails) && "xl:grid-cols-3")}>
                       {day.alankaranas.map((alankarana) => (
-                        <article key={alankarana.deity} className="alankarana-card" data-deity={alankarana.deity}>
-                          <p className="text-[.68rem] font-extrabold tracking-[.08em] text-vermilion uppercase">{goddessLabels[alankarana.deity][language]}</p>
-                          <h4 className="mt-2 text-sm font-bold leading-5 text-ink">{alankarana.form[language]}</h4>
-                          <p className="mt-2 text-xs leading-5 text-ink-muted"><span className="font-semibold">{t.sareeColor}:</span> {alankarana.color[language]}</p>
+                        <article
+                          key={alankarana.deity}
+                          className={cn("alankarana-card", alankarana.programmeDetails && "sm:grid sm:grid-cols-[11rem_1fr] sm:gap-5")}
+                          data-deity={alankarana.deity}
+                        >
+                          {alankarana.image && (
+                            <img
+                              src={alankarana.image}
+                              alt={alankarana.form[language]}
+                              className={cn("mb-4 aspect-[3/4] w-full rounded-xl bg-ivory object-cover object-top", alankarana.programmeDetails && "sm:mb-0")}
+                              loading="lazy"
+                              decoding="async"
+                            />
+                          )}
+                          <div className="min-w-0">
+                            <p className="text-[.68rem] font-extrabold tracking-[.08em] text-vermilion uppercase">{goddessLabels[alankarana.deity][language]}</p>
+                            <h4 className="mt-2 text-base font-bold leading-6 text-ink">{alankarana.form[language]}</h4>
+                            <p className="mt-2 text-xs leading-5 text-ink-muted"><span className="font-semibold">{t.sareeColor}:</span> {alankarana.color[language]}</p>
+                            {alankarana.programmeDetails && (
+                              <div className="mt-4 border-t border-ink/10 pt-4">
+                                <p className="text-[.68rem] font-extrabold tracking-[.08em] text-vermilion uppercase">{t.programmeSevaDetails}</p>
+                                <dl className="mt-2 divide-y divide-ink/8">
+                                  {alankarana.programmeDetails.map((detail) => (
+                                    <div key={detail.service.en} className="py-3 first:pt-1">
+                                      <dt className="text-xs font-bold leading-5 text-ink">{detail.service[language]}</dt>
+                                      <dd className="mt-1 text-xs font-semibold leading-5 text-vermilion">{detail.gotram[language]}</dd>
+                                      <dd className="mt-1 text-xs leading-5 text-ink-muted">{detail.devotees[language]}</dd>
+                                    </div>
+                                  ))}
+                                </dl>
+                              </div>
+                            )}
+                          </div>
                         </article>
                       ))}
                     </div>
@@ -482,7 +511,17 @@ function Footer({ language }) {
     <footer className="border-t border-ink/8 bg-gold-pale/45 py-10">
       <div className="page-shell flex flex-col items-center justify-between gap-6 text-center sm:flex-row sm:text-left">
         <div><p className="font-bold text-ink">{temple.name[language]}</p><p className="mt-1 text-xs text-ink-muted">{t.footer}</p></div>
-        <p className="max-w-sm text-xs leading-5 text-ink-faint sm:text-right">{t.sourceNote}</p>
+        <p className="max-w-sm text-xs leading-5 text-ink-faint sm:text-right">
+          {t.footerCredit}{" "}
+          <a
+            href="https://www.linkedin.com/in/tarun-bharadwaj/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-bold text-vermilion underline decoration-gold decoration-2 underline-offset-4 outline-none transition-colors hover:text-ink focus-visible:ring-2 focus-visible:ring-gold"
+          >
+            {t.footerCreditLink}
+          </a>
+        </p>
       </div>
     </footer>
   )
