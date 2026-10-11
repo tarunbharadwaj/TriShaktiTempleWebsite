@@ -5,6 +5,9 @@ import "@fontsource/noto-sans-telugu/600.css"
 import "@fontsource/noto-sans-telugu/700.css"
 import "./index.css"
 import App from "./App"
+import { initializeGoogleAnalytics } from "@/lib/analytics"
+
+initializeGoogleAnalytics()
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
