@@ -229,6 +229,18 @@ function formatDate(date, language) {
   return `${Number(day)} ${language === "te" ? "అక్టోబర్" : month === "10" ? "October" : ""}`
 }
 
+function getCurrentScheduleDay() {
+  const today = new Date()
+  const localDate = [
+    today.getFullYear(),
+    String(today.getMonth() + 1).padStart(2, "0"),
+    String(today.getDate()).padStart(2, "0"),
+  ].join("-")
+  const currentDayIndex = schedule.findIndex((day) => day.date === localDate)
+
+  return `day-${currentDayIndex >= 0 ? currentDayIndex : 0}`
+}
+
 function ScheduleSection({ language }) {
   const t = copy[language]
   return (
@@ -244,7 +256,7 @@ function ScheduleSection({ language }) {
           </div>
         </Reveal>
         <Reveal>
-          <Accordion type="single" collapsible defaultValue="day-0" className="schedule-list">
+          <Accordion type="single" collapsible defaultValue={getCurrentScheduleDay()} className="schedule-list">
             {schedule.map((day, index) => (
               <AccordionItem key={day.date} value={`day-${index}`} className="schedule-item">
                 <AccordionTrigger className="px-1 sm:px-3">
@@ -284,6 +296,7 @@ function ScheduleSection({ language }) {
                               className={cn("mb-4 aspect-[3/4] w-full rounded-xl bg-ivory object-cover object-top", alankarana.programmeDetails && "sm:mb-0")}
                               loading="lazy"
                               decoding="async"
+                              onError={(event) => { event.currentTarget.hidden = true }}
                             />
                           )}
                           <div className="min-w-0">
