@@ -293,7 +293,7 @@ function ScheduleSection({ language }) {
                             <img
                               src={alankarana.image}
                               alt={alankarana.form[language]}
-                              className={cn("mb-4 aspect-[3/4] w-full rounded-xl bg-ivory object-cover object-top", alankarana.programmeDetails && "sm:mb-0")}
+                              className={cn("mb-4 aspect-[3/4] w-full rounded-xl bg-ivory object-cover object-center", alankarana.programmeDetails && "sm:mb-0")}
                               loading="lazy"
                               decoding="async"
                               onError={(event) => { event.currentTarget.hidden = true }}
