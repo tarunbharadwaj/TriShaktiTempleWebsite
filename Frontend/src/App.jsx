@@ -18,10 +18,10 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import { Button } from "@/components/ui/button"
 import { Dialog, DialogContent, DialogDescription, DialogTitle, DialogTrigger } from "@/components/ui/dialog"
 import { Sheet, SheetClose, SheetContent, SheetDescription, SheetTitle, SheetTrigger } from "@/components/ui/sheet"
-import { contacts, copy, goddessLabels, posters, pujas, schedule, temple } from "@/data/content"
+import { attractions, contacts, copy, goddessLabels, posters, pujas, schedule, temple } from "@/data/content"
 import { cn } from "@/lib/utils"
 
-const navKeys = ["festival", "schedule", "pujas", "gallery", "visit"]
+const navKeys = ["festival", "schedule", "pujas", "attractions", "gallery", "visit"]
 const categories = ["all", "alankarana", "archana", "special", "seva"]
 
 function useLanguage() {
@@ -277,6 +277,40 @@ function ScheduleSection({ language }) {
                       </div>
                     ))}
                   </div>
+                  {day.noticeImage && (
+                    <div className="mt-5 border-t border-ink/8 pt-5">
+                      <p className="flex items-center gap-2 text-xs font-extrabold tracking-[.08em] text-vermilion uppercase">
+                        <Info className="size-4" aria-hidden="true" />
+                        {day.noticeImage.title[language]}
+                      </p>
+                      <Dialog>
+                        <DialogTrigger asChild>
+                          <button
+                            type="button"
+                            className="mt-4 block w-full overflow-hidden rounded-2xl bg-ivory p-2 text-left shadow-sm ring-1 ring-ink/8 outline-none transition hover:ring-gold focus-visible:ring-2 focus-visible:ring-gold"
+                            aria-label={day.noticeImage.title[language]}
+                          >
+                            <img
+                              src={day.noticeImage.src}
+                              alt={day.noticeImage.alt[language]}
+                              className="mx-auto max-h-[42rem] w-auto rounded-xl object-contain"
+                              loading="lazy"
+                              decoding="async"
+                            />
+                          </button>
+                        </DialogTrigger>
+                        <DialogContent>
+                          <DialogTitle className="sr-only">{day.noticeImage.title[language]}</DialogTitle>
+                          <DialogDescription className="sr-only">{day.noticeImage.alt[language]}</DialogDescription>
+                          <img
+                            src={day.noticeImage.src}
+                            alt={day.noticeImage.alt[language]}
+                            className="mx-auto max-h-[86vh] w-auto rounded-[1.4rem]"
+                          />
+                        </DialogContent>
+                      </Dialog>
+                    </div>
+                  )}
                   <div className="mt-5 border-t border-ink/8 pt-5">
                     <p className="flex items-center gap-2 text-xs font-extrabold tracking-[.08em] text-vermilion uppercase">
                       <Flower2 className="size-4" aria-hidden="true" />
@@ -480,6 +514,81 @@ function GallerySection({ language }) {
   )
 }
 
+function AttractionsSection({ language }) {
+  const t = copy[language]
+  const widePhotos = new Set([0, 4])
+
+  return (
+    <section id="attractions" className="section scroll-mt-24 overflow-hidden">
+      <div className="page-shell">
+        <Reveal>
+          <SectionHeading
+            eyebrow={t.attractionsEyebrow}
+            title={t.attractionsTitle}
+            body={t.attractionsBody}
+            align="center"
+          />
+        </Reveal>
+
+        <div className="mt-10 flex items-center justify-center gap-3">
+          <span className="h-px w-10 bg-gold/70" aria-hidden="true" />
+          <p className="text-center text-xs font-bold tracking-[0.18em] text-vermilion uppercase">{t.attractionsPhotos}</p>
+          <span className="h-px w-10 bg-gold/70" aria-hidden="true" />
+        </div>
+
+        <div className="mt-6 grid auto-rows-[12rem] grid-cols-2 gap-3 sm:auto-rows-[15rem] md:gap-5 lg:auto-rows-[17rem] lg:grid-cols-4">
+          {attractions.photos.map((photo, index) => (
+            <Reveal
+              key={photo.src}
+              className={cn(
+                "min-h-0",
+                widePhotos.has(index) ? "col-span-2 row-span-2" : "col-span-1 row-span-1",
+                index === 6 && "col-span-2 lg:col-span-1",
+              )}
+            >
+              <figure className="group relative h-full overflow-hidden rounded-[1.6rem] bg-ink shadow-[0_20px_55px_-32px_rgba(52,26,18,0.55)]">
+                <img
+                  src={photo.src}
+                  alt={photo.alt[language]}
+                  className="h-full w-full object-cover transition duration-700 ease-out group-hover:scale-[1.025]"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <span className="pointer-events-none absolute inset-0 ring-1 ring-inset ring-white/15" aria-hidden="true" />
+              </figure>
+            </Reveal>
+          ))}
+        </div>
+
+        <div className="mt-16 flex items-center justify-center gap-3">
+          <span className="h-px w-10 bg-gold/70" aria-hidden="true" />
+          <p className="text-center text-xs font-bold tracking-[0.18em] text-vermilion uppercase">{t.attractionsVideos}</p>
+          <span className="h-px w-10 bg-gold/70" aria-hidden="true" />
+        </div>
+
+        <div className="mt-6 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+          {attractions.videos.map((video) => (
+            <Reveal key={video.src} className="h-full">
+              <article className="h-full overflow-hidden rounded-[1.6rem] bg-ink p-2 shadow-[0_20px_55px_-32px_rgba(52,26,18,0.7)]">
+                <video
+                  controls
+                  playsInline
+                  preload="metadata"
+                  aria-label={video.title[language]}
+                  className="aspect-[9/16] w-full rounded-[1.15rem] bg-black object-contain"
+                >
+                  <source src={video.src} type="video/mp4" />
+                </video>
+                <p className="px-3 py-3 text-sm font-bold text-white">{video.title[language]}</p>
+              </article>
+            </Reveal>
+          ))}
+        </div>
+      </div>
+    </section>
+  )
+}
+
 function VisitSection({ language }) {
   const t = copy[language]
   const [showCommittee, setShowCommittee] = useState(false)
@@ -574,6 +683,7 @@ export default function App() {
         <ScheduleSection language={language} />
         <PujaSection language={language} />
         <GivingSection language={language} />
+        <AttractionsSection language={language} />
         <GallerySection language={language} />
         <VisitSection language={language} />
       </main>

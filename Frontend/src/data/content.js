@@ -17,7 +17,7 @@ export const temple = {
 
 export const copy = {
   en: {
-    nav: { festival: "Festival", schedule: "Schedule", pujas: "Pujas", gallery: "Posters", visit: "Visit" },
+    nav: { festival: "Festival", schedule: "Schedule", pujas: "Pujas", attractions: "Attractions", gallery: "Posters", visit: "Visit" },
     language: "తెలుగు",
     languagePrompt: "Prefer Telugu?",
     languageAction: "తెలుగులో చూడండి",
@@ -72,6 +72,11 @@ export const copy = {
     perMonth: "Per month",
     perYear: "Per annum",
     lifetime: "Life contribution",
+    attractionsEyebrow: "Temple highlights",
+    attractionsTitle: "Festival attractions",
+    attractionsBody: "Explore the vibrant Bommala Koluvu, where hundreds of devotional figurines and sacred scenes come together in a joyful festival display.",
+    attractionsPhotos: "Bommala Koluvu in pictures",
+    attractionsVideos: "Experience the display",
     postersEyebrow: "Official notices",
     postersTitle: "Festival posters",
     postersBody: "A visual archive of the announcements supplied by the temple committee.",
@@ -93,7 +98,7 @@ export const copy = {
     footerCreditLink: "Devotee",
   },
   te: {
-    nav: { festival: "ఉత్సవం", schedule: "కార్యక్రమం", pujas: "పూజలు", gallery: "పోస్టర్లు", visit: "దర్శనం" },
+    nav: { festival: "ఉత్సవం", schedule: "కార్యక్రమం", pujas: "పూజలు", attractions: "ఆకర్షణలు", gallery: "పోస్టర్లు", visit: "దర్శనం" },
     language: "English",
     languagePrompt: "Prefer English?",
     languageAction: "View in English",
@@ -148,6 +153,11 @@ export const copy = {
     perMonth: "నెలకు",
     perYear: "సంవత్సరానికి",
     lifetime: "జీవిత చందా",
+    attractionsEyebrow: "ఆలయ విశేషాలు",
+    attractionsTitle: "ఉత్సవ ఆకర్షణలు",
+    attractionsBody: "వందలాది భక్తి బొమ్మలు మరియు పవిత్ర దృశ్యాలతో ఆనందంగా అలంకరించిన బొమ్మల కొలువును దర్శించండి.",
+    attractionsPhotos: "చిత్రాలలో బొమ్మల కొలువు",
+    attractionsVideos: "బొమ్మల కొలువు వీడియోలు",
     postersEyebrow: "అధికారిక ప్రకటనలు",
     postersTitle: "ఉత్సవ పోస్టర్లు",
     postersBody: "ఆలయ కమిటీ అందించిన ప్రకటనల దృశ్య భాండాగారం.",
@@ -649,6 +659,14 @@ export const schedule = [
       { time: "5:30 PM", en: "Collective Saraswati Puja", te: "సామూహిక సరస్వతి పూజ" },
       { time: "6:30 PM", en: "Sahasra Swethakusumarchana", te: "సహస్ర శ్వేత కుసుమార్చన" },
     ],
+    noticeImage: {
+      src: "/programme/aksharabhyasam-materials-2026-10-16.jpeg",
+      title: { en: "Items devotees should bring for Aksharabhyasam", te: "అక్షరాభ్యాసానికి భక్తులు తీసుకురావలసిన సామగ్రి" },
+      alt: {
+        en: "Telugu notice listing the puja materials devotees should bring for Aksharabhyasam on 16 October 2026",
+        te: "2026 అక్టోబర్ 16 అక్షరాభ్యాసానికి భక్తులు తీసుకురావలసిన పూజా సామగ్రి తెలుగు ప్రకటన",
+      },
+    },
     alankaranas: [
       { deity: "mahakali", form: { en: "Maha Saraswati Devi", te: "శ్రీ మహా సరస్వతీ దేవి" }, color: { en: "Kanakambaram orange", te: "కనకాంబరం" } },
       { deity: "mahalakshmi", form: { en: "Dhana Lakshmi Devi", te: "శ్రీ ధనలక్ష్మీ దేవి" }, color: { en: "Pink", te: "గులాబి" } },
@@ -746,6 +764,45 @@ export const contacts = {
   convenor: "95028 66939",
   organisers: ["91004 57777", "9848484008"],
   committee: ["98495 69088", "90007 37337", "97017 56565", "98495 89707", "98661 04666", "99633 22272", "94409 77251", "98495 59029", "90322 33171", "96525 95969", "94419 45600", "94915 60884", "90003 64365"],
+}
+
+export const attractions = {
+  photos: [
+    {
+      src: "/attractions/photos/bommala-koluvu-wide-01.jpeg",
+      alt: { en: "A grand Bommala Koluvu display filled with devotional figurines", te: "భక్తి బొమ్మలతో అలంకరించిన విశాలమైన బొమ్మల కొలువు" },
+    },
+    {
+      src: "/attractions/photos/bommala-koluvu-detail-01.jpeg",
+      alt: { en: "Close view of sacred figurines in the Bommala Koluvu", te: "బొమ్మల కొలువులోని పవిత్ర బొమ్మల సమీప దృశ్యం" },
+    },
+    {
+      src: "/attractions/photos/bommala-koluvu-detail-02.jpeg",
+      alt: { en: "Musician figurines in the Bommala Koluvu display", te: "బొమ్మల కొలువులోని సంగీత కళాకారుల బొమ్మలు" },
+    },
+    {
+      src: "/attractions/photos/bommala-koluvu-detail-03.jpeg",
+      alt: { en: "A ceremonial scene represented with colourful figurines", te: "రంగురంగుల బొమ్మలతో రూపొందించిన వేడుక దృశ్యం" },
+    },
+    {
+      src: "/attractions/photos/bommala-koluvu-wide-02.jpeg",
+      alt: { en: "Full view of the illuminated Bommala Koluvu festival display", te: "దీపాలతో అలంకరించిన బొమ్మల కొలువు పూర్తి దృశ్యం" },
+    },
+    {
+      src: "/attractions/photos/bommala-koluvu-detail-04.jpeg",
+      alt: { en: "Rows of colourful deities and devotional figurines", te: "రంగురంగుల దేవతా మరియు భక్తి బొమ్మల వరుసలు" },
+    },
+    {
+      src: "/attractions/photos/bommala-koluvu-detail-05.jpeg",
+      alt: { en: "A traditional gathering scene in the Bommala Koluvu", te: "బొమ్మల కొలువులోని సంప్రదాయ సమావేశ దృశ్యం" },
+    },
+  ],
+  videos: [
+    { src: "/attractions/videos/bommala-koluvu-01.mp4", title: { en: "Bommala Koluvu — view 1", te: "బొమ్మల కొలువు — దృశ్యం 1" } },
+    { src: "/attractions/videos/bommala-koluvu-02.mp4", title: { en: "Bommala Koluvu — view 2", te: "బొమ్మల కొలువు — దృశ్యం 2" } },
+    { src: "/attractions/videos/bommala-koluvu-03.mp4", title: { en: "Bommala Koluvu — view 3", te: "బొమ్మల కొలువు — దృశ్యం 3" } },
+    { src: "/attractions/videos/bommala-koluvu-04.mp4", title: { en: "Bommala Koluvu — view 4", te: "బొమ్మల కొలువు — దృశ్యం 4" } },
+  ],
 }
 
 export const posters = [
