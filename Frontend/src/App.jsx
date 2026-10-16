@@ -317,7 +317,9 @@ function ScheduleSection({ language }) {
                       {t.alankaranaDetails}
                     </p>
                     <div className={cn("mt-3 grid gap-2", !day.alankaranas.some((item) => item.programmeDetails) && "xl:grid-cols-3")}>
-                      {day.alankaranas.map((alankarana) => (
+                      {[...day.alankaranas]
+                        .sort((first, second) => (first.displayOrder ?? 0) - (second.displayOrder ?? 0))
+                        .map((alankarana) => (
                         <article
                           key={alankarana.deity}
                           className={cn("alankarana-card", alankarana.programmeDetails && "sm:grid sm:grid-cols-[11rem_1fr] sm:gap-5")}
@@ -327,7 +329,7 @@ function ScheduleSection({ language }) {
                             <img
                               src={alankarana.image}
                               alt={alankarana.form[language]}
-                              className={cn("mb-4 aspect-[3/4] w-full rounded-xl bg-ivory object-cover object-center", alankarana.programmeDetails && "sm:mb-0")}
+                              className={cn("mb-4 aspect-[3/4] w-full rounded-xl bg-ivory object-contain object-center", alankarana.programmeDetails && "sm:mb-0")}
                               loading="lazy"
                               decoding="async"
                               onError={(event) => { event.currentTarget.hidden = true }}
@@ -353,7 +355,7 @@ function ScheduleSection({ language }) {
                             )}
                           </div>
                         </article>
-                      ))}
+                        ))}
                     </div>
                   </div>
                 </AccordionContent>
