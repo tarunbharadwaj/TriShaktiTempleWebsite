@@ -959,9 +959,93 @@ export const schedule = [
       { time: "6:30 PM", en: "Collective Sahasra Kumkumarchana", te: "స్త్రీలచే సామూహిక సహస్ర కుంకుమార్చన" },
     ],
     alankaranas: [
-      { deity: "mahakali", form: { en: "Mahishasura Mardini Devi", te: "శ్రీ మహిషాసురమర్దిని దేవి" }, color: { en: "Green", te: "ఆకుపచ్చ" } },
-      { deity: "mahalakshmi", form: { en: "Maha Lakshmi Devi", te: "శ్రీ మహాలక్ష్మీ దేవి" }, color: { en: "Pink", te: "గులాబి" } },
-      { deity: "mahasaraswati", form: { en: "Brahmani Devi", te: "శ్రీ బ్రహ్మాణీ దేవి" }, color: { en: "Kanakambaram orange", te: "కనకాంబరం" } },
+      {
+        deity: "mahakali",
+        displayOrder: 2,
+        form: { en: "Sri Mahishasuramardhini Devi", te: "శ్రీ మహిషాసురమర్దిని దేవి" },
+        color: { en: "Green", te: "ఆకుపచ్చ" },
+        image: "/goddesses/19-mahishasuramardhini.jpeg",
+        programmeDetails: [
+          {
+            service: { en: "Special avataram", te: "విశేష అవతారము" },
+            gotram: { en: "Haritasa Gotram", te: "హారితస గోత్రం" },
+            devotees: { en: "Kanti Kumar – Harita Sriyansh", te: "కాంతి కుమార్ – హరిత శ్రీయాన్ష్" },
+          },
+          {
+            service: { en: "Gajamala seva", te: "గజమాల సేవ" },
+            gotram: { en: "Haritasa Gotram", te: "హారితస గోత్రం" },
+            devotees: { en: "Kanti Kumar – Harita Sriyansh", te: "కాంతి కుమార్ – హరిత శ్రీయాన్ష్" },
+          },
+          {
+            service: { en: "Pushpa alankarana", te: "పుష్ప అలంకారము" },
+            gotram: { en: "Haritasa Gotram", te: "హారితస గోత్రం" },
+            devotees: { en: "Kanti Kumar – Harita Sriyansh", te: "కాంతి కుమార్ – హరిత శ్రీయాన్ష్" },
+          },
+          {
+            service: { en: "Special pushpa alankarana", te: "విశేష పుష్పాలంకరణ" },
+            gotram: { en: "Haritasa Gotram", te: "హారితస గోత్రం" },
+            devotees: { en: "Subrahmanyam – Subbalakshmi – Sarang", te: "సుబ్రహ్మణ్యం – సుబ్బలక్ష్మి – సారంగ్" },
+          },
+        ],
+      },
+      {
+        deity: "mahalakshmi",
+        displayOrder: 3,
+        form: { en: "Sri Maha Lakshmi Devi", te: "శ్రీ మహాలక్ష్మీ దేవి" },
+        color: { en: "Pink", te: "గులాబి" },
+        image: "/goddesses/19-maha-saraswati.jpeg",
+        programmeDetails: [
+          {
+            service: { en: "Special avataram", te: "విశేష అవతారము" },
+            gotram: { en: "Kashyapasa Gotram", te: "కాశ్యపస గోత్రం" },
+            devotees: { en: "Sai Vamshi – Pranavi", te: "సాయి వంశీ – ప్రణవి" },
+          },
+          {
+            service: { en: "Gajamala seva", te: "గజమాల సేవ" },
+            gotram: { en: "Dhanarivakula Gotram", te: "ధనరికుల గోత్రం" },
+            devotees: { en: "Akkineni Singa Rao – Sitaratnam, Vamshikrishna", te: "అక్కినేని సింగరావు – సీతారత్నం, వంశీకృష్ణ" },
+          },
+          {
+            service: { en: "Pushpa alankarana", te: "పుష్ప అలంకారము" },
+            gotram: { en: "Koundinyasa Gotram", te: "కౌండిన్యస గోత్రం" },
+            devotees: { en: "Subrahmanya Sarma – Sobharaani", te: "సుబ్రహ్మణ్యశర్మ – శోభారాణి" },
+          },
+          {
+            service: { en: "Special pushpa alankarana", te: "విశేష పుష్పాలంకరణ" },
+            gotram: { en: "Paidipala Gotram", te: "పైడిపాల గోత్రం" },
+            devotees: { en: "Durgamalleswara Rao – Suguna, Divya Tejaswini", te: "దుర్గమల్లేశ్వరరావు – సుగుణ, దివ్య తేజస్విని" },
+          },
+        ],
+      },
+      {
+        deity: "mahasaraswati",
+        displayOrder: 1,
+        form: { en: "Maha Saraswati Devi", te: "మహా సరస్వతీ దేవి" },
+        color: { en: "Kanakambaram orange", te: "కనకాంబరం" },
+        image: "/goddesses/19-maha-lakshmi.jpeg",
+        programmeDetails: [
+          {
+            service: { en: "Special avataram", te: "విశేష అవతారము" },
+            gotram: { en: "Sri Vatsasa Gotram", te: "శ్రీవత్సస గోత్రం" },
+            devotees: { en: "Venkata Subrahmanyam, Sagi Raani", te: "వెంకట సుబ్రహ్మణ్యం, సాగిరాణి" },
+          },
+          {
+            service: { en: "Gajamala seva", te: "గజమాల సేవ" },
+            gotram: { en: "Paidipala Gotram", te: "పైడిపాల గోత్రం" },
+            devotees: { en: "Uma Maheswara Rao – Nagalakshmi", te: "ఉమా మహేశ్వరరావు – నాగలక్ష్మి" },
+          },
+          {
+            service: { en: "Pushpa alankarana", te: "పుష్ప అలంకారము" },
+            gotram: { en: "Sri Vatsasa Gotram", te: "శ్రీవత్సస గోత్రం" },
+            devotees: { en: "Dileep Kumar – Swarnalatha", te: "దిలీప్ కుమార్ – స్వర్ణలత" },
+          },
+          {
+            service: { en: "Special pushpa alankarana", te: "విశేష పుష్పాలంకరణ" },
+            gotram: { en: "Nagula Gotram", te: "నాగుల గోత్రం" },
+            devotees: { en: "Ramanaga Bhushan – Satyashanti Chaudari, Kovid Raman", te: "రామనాగభూషణ్ – సత్యశాంతి చౌదరి, కోవిడ్ రామన్" },
+          },
+        ],
+      },
     ],
   },
   {
@@ -973,9 +1057,93 @@ export const schedule = [
       { time: "7:00 PM", en: "Shami Puja (Jammi Puja)", te: "శమీపూజ (జమ్మి పూజ)" },
     ],
     alankaranas: [
-      { deity: "mahakali", form: { en: "Raja Rajeshwari Devi", te: "శ్రీ రాజరాజేశ్వరీ దేవి" }, color: { en: "Pink", te: "గులాబి" } },
-      { deity: "mahalakshmi", form: { en: "Aishwarya Lakshmi Devi", te: "శ్రీ ఐశ్వర్యలక్ష్మీ దేవి" }, color: { en: "Golden", te: "బంగారు వర్ణం" } },
-      { deity: "mahasaraswati", form: { en: "Aparajita Devi", te: "శ్రీ అపరాజితా దేవి" }, color: { en: "Green", te: "ఆకుపచ్చ" } },
+      {
+        deity: "mahakali",
+        displayOrder: 2,
+        form: { en: "Sri Mahishasuramardhini Devi", te: "శ్రీ మహిషాసురమర్దిని దేవి" },
+        color: { en: "Pink", te: "గులాబి" },
+        image: "/goddesses/20-mahishasuramardhini.jpeg",
+        programmeDetails: [
+          {
+            service: { en: "Special avataram", te: "విశేష అవతారము" },
+            gotram: { en: "Ullati Gotram", te: "ఊల్లటి గోత్రం" },
+            devotees: { en: "Venkata Rama Babu – Lakshmi Sailaja", te: "వెంకటరాంబాబు – లక్ష్మీ శైలజ" },
+          },
+          {
+            service: { en: "Gajamala seva", te: "గజమాల సేవ" },
+            gotram: { en: "Ullati Gotram", te: "ఊల్లటి గోత్రం" },
+            devotees: { en: "Venkata Rama Babu – Lakshmi Sailaja", te: "వెంకటరాంబాబు – లక్ష్మీ శైలజ" },
+          },
+          {
+            service: { en: "Pushpa alankarana", te: "పుష్ప అలంకారము" },
+            gotram: { en: "Paidipala Gotram", te: "పైడిపాల గోత్రం" },
+            devotees: { en: "Uma Maheswara Rao – Nagalakshmi", te: "ఉమా మహేశ్వరరావు – నాగలక్ష్మి" },
+          },
+          {
+            service: { en: "Special pushpa alankarana", te: "విశేష పుష్పాలంకరణ" },
+            gotram: { en: "Settibala Gotram", te: "శెట్టిబాల గోత్రం" },
+            devotees: { en: "Sri Prakash – Sri Rajya Lakshmi, Sri Govardhana Sai", te: "శ్రీ ప్రకాశ్ – శ్రీరాజ్యలక్ష్మి, శ్రీ గోవర్ధనసాయి" },
+          },
+        ],
+      },
+      {
+        deity: "mahalakshmi",
+        displayOrder: 1,
+        form: { en: "Sri Iswarya Lakshmi Devi", te: "శ్రీ ఐశ్వర్యలక్ష్మీ దేవి" },
+        color: { en: "Golden", te: "బంగారు వర్ణం" },
+        image: "/goddesses/20-iswarya-lakshmi.jpeg",
+        programmeDetails: [
+          {
+            service: { en: "Special avataram", te: "విశేష అవతారము" },
+            gotram: { en: "Kausikasa Gotram", te: "కౌశికస గోత్రం" },
+            devotees: { en: "Venkata Krishna Bhaskara Narasimha Rao – Sirisha; Johith Sai Karthik, Sai Aadya", te: "వెంకటకృష్ణ భాస్కర నరసింహారావు – శిరీష, చి|| జోహిత్ సాయి కార్తీక్, చి|| సాయి ఆద్య" },
+          },
+          {
+            service: { en: "Gajamala seva", te: "గజమాల సేవ" },
+            gotram: { en: "Dhanunjaya Gotram", te: "ధనుంజయ గోత్రం" },
+            devotees: { en: "Tejaswini; Sri Tejesh Veer Varma", te: "తేజశ్విని, చి|| శ్రీతేజవీర్ వర్మ" },
+          },
+          {
+            service: { en: "Pushpa alankarana", te: "పుష్ప అలంకారము" },
+            gotram: { en: "Paidipala Gotram", te: "పైడిపాల గోత్రం" },
+            devotees: { en: "Ravi Chandra Mouli – Yojitha", te: "రవిచంద్ర మౌళి – యోజిత" },
+          },
+          {
+            service: { en: "Special pushpa alankarana", te: "విశేష పుష్పాలంకరణ" },
+            gotram: { en: "Nagula Gotram", te: "నాగుల గోత్రం" },
+            devotees: { en: "Tata Babu – Devudamma; Sanyasi Naidu – Srinivasa Rao, Ramakrishna", te: "తాతబాబు – దేవుడమ్మ, సన్యాసినాయుడు – శ్రీనివాసరావు, రామకృష్ణ" },
+          },
+        ],
+      },
+      {
+        deity: "mahasaraswati",
+        displayOrder: 3,
+        form: { en: "Sri Maha Lakshmi Devi", te: "శ్రీ మహాలక్ష్మీ దేవి" },
+        color: { en: "Green", te: "ఆకుపచ్చ" },
+        image: "/goddesses/20-maha-lakshmi.jpeg",
+        programmeDetails: [
+          {
+            service: { en: "Special avataram", te: "విశేష అవతారము" },
+            gotram: { en: "Sri Vatsasa Gotram", te: "శ్రీవత్సస గోత్రం" },
+            devotees: { en: "Dileep Kumar – Swarnalatha", te: "దిలీప్ కుమార్ – స్వర్ణలత" },
+          },
+          {
+            service: { en: "Gajamala seva", te: "గజమాల సేవ" },
+            gotram: { en: "Vasishta Gotram", te: "వశిష్ఠ గోత్రం" },
+            devotees: { en: "Srinivasa Raju – Rajeswari", te: "శ్రీనివాసరాజు – రాజేశ్వరి" },
+          },
+          {
+            service: { en: "Pushpa alankarana", te: "పుష్ప అలంకారము" },
+            gotram: { en: "Kashyapasa Gotram", te: "కాశ్యపస గోత్రం" },
+            devotees: { en: "Venkatachala Ravi Kiran – Karthik Sai Lakshmi, Naga; Abhinav", te: "వెంకటాచల రవికిరణ్ – కార్తీక్ సాయిలక్ష్మి, నాగ, చి|| అభినవ్" },
+          },
+          {
+            service: { en: "Special pushpa alankarana", te: "విశేష పుష్పాలంకరణ" },
+            gotram: { en: "Bharadwaja Gotram", te: "భరద్వాజస గోత్రం" },
+            devotees: { en: "Kalyan Anand – Durga Bhavani; Lithik – Sri Lokya, Radha Krishna Veni", te: "కళ్యాణ్ ఆనంద్ – దుర్గాభవాని, లితిక్ – శ్రీలౌక్య, రాధాకృష్ణవేణి" },
+          },
+        ],
+      },
     ],
   },
 ]
